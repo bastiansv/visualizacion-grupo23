@@ -1,51 +1,21 @@
-import geopandas as gpd
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.colors as mcolors
 from matplotlib.cm import ScalarMappable
 import pandas as pd
+import json
 
 # ---------------------------------------------
 # Datos: Población, Área y Nombres acortados
 # (valores en km²)
 # ---------------------------------------------
-poblacion_por_region = {
-    "Arica y Parinacota": 244569,
-    "Tarapacá": 369806,
-    "Antofagasta": 635416,
-    "Atacama": 299180,
-    "Coquimbo": 832864,
-    "Valparaíso": 1896053,
-    "Metropolitana de Santiago": 7400741,
-    "Libertador General Bernardo O'Higgins": 987228,
-    "Maule": 1123008,
-    "Ñuble": 512289,
-    "Biobío": 1613059,
-    "La Araucanía": 1010423,
-    "Los Ríos": 398230,
-    "Los Lagos": 890284,
-    "Aysén del General Carlos Ibáñez del Campo": 100745,
-    "Magallanes y de la Antártica Chilena": 166537,
-}
+json_path = r"./data_felipe/densidad_poblacional_2024.json"
+with open(json_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
-area_por_region = {
-    "Arica y Parinacota": 16.87,
-    "Tarapacá": 42.23,
-    "Antofagasta": 126.05,
-    "Atacama": 75.18,
-    "Coquimbo": 40.58,
-    "Valparaíso": 16.4,
-    "Metropolitana de Santiago": 15.4,
-    "Libertador General Bernardo O'Higgins": 16.39,
-    "Maule": 30.3,
-    "Ñuble": 13.18,
-    "Biobío": 24.02,
-    "La Araucanía": 31.84,
-    "Los Ríos": 18.43,
-    "Los Lagos": 48.58,
-    "Aysén del General Carlos Ibáñez del Campo": 108.49,
-    "Magallanes y de la Antártica Chilena": 132.29,
-}
+# Asignar a variables
+poblacion_por_region = data['poblacion_por_region']
+area_por_region = data['area_por_region']
 
 nombre_regiones_acortados = {
     "Arica y Parinacota": "Arica y Parinacota",
@@ -74,7 +44,6 @@ densidad_por_region = {
     for region in poblacion_por_region
 }
 
-# Crear DataFrame y asignar número de región
 df = pd.DataFrame({
     'region': list(densidad_por_region.keys()),
     'densidad': list(densidad_por_region.values()),
@@ -154,7 +123,7 @@ cbar = plt.colorbar(sm, ax=ax, orientation='vertical', shrink=0.6, pad=0.05)
 cbar.set_label('Densidad (hab/km²)', fontsize=12)
 
 # ---------------------------------------------
-# Crear leyenda a la izquierda
+# Crear leyenda
 # ---------------------------------------------
 handles = []
 labels = []
@@ -170,5 +139,4 @@ for i, (_, row) in enumerate(df.iterrows()):
 ax.legend(handles=handles, labels=labels, loc='best', bbox_to_anchor=(-0, 1),
           fontsize=9, frameon=False, ncol=1)
 
-# Mostrar el gráfico
 plt.show()

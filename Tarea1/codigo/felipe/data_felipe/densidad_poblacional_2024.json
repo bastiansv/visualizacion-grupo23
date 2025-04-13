@@ -1,0 +1,38 @@
+{
+  "poblacion_por_region": {
+    "Arica y Parinacota": 244569,
+    "Tarapacá": 369806,
+    "Antofagasta": 635416,
+    "Atacama": 299180,
+    "Coquimbo": 832864,
+    "Valparaíso": 1896053,
+    "Metropolitana de Santiago": 7400741,
+    "Libertador General Bernardo O'Higgins": 987228,
+    "Maule": 1123008,
+    "Ñuble": 512289,
+    "Biobío": 1613059,
+    "La Araucanía": 1010423,
+    "Los Ríos": 398230,
+    "Los Lagos": 890284,
+    "Aysén del General Carlos Ibáñez del Campo": 100745,
+    "Magallanes y de la Antártica Chilena": 166537
+  },
+  "area_por_region": {
+    "Arica y Parinacota": 16.87,
+    "Tarapacá": 42.23,
+    "Antofagasta": 126.05,
+    "Atacama": 75.18,
+    "Coquimbo": 40.58,
+    "Valparaíso": 16.4,
+    "Metropolitana de Santiago": 15.4,
+    "Libertador General Bernardo O'Higgins": 16.39,
+    "Maule": 30.3,
+    "Ñuble": 13.18,
+    "Biobío": 24.02,
+    "La Araucanía": 31.84,
+    "Los Ríos": 18.43,
+    "Los Lagos": 48.58,
+    "Aysén del General Carlos Ibáñez del Campo": 108.49,
+    "Magallanes y de la Antártica Chilena": 132.29
+  }
+}
