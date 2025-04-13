@@ -1,0 +1,21 @@
+{
+    "regiones": [
+      {"region": "Región de Tarapacá", "porcentaje": 44.9},
+      {"region": "Región de Antofagasta", "porcentaje": 37.4},
+      {"region": "Región de Arica y Parinacota", "porcentaje": 35.1},
+      {"region": "Región Metropolitana de Santiago", "porcentaje": 24.5},
+      {"region": "Región de Atacama", "porcentaje": 16.3},
+      {"region": "Región de Magallanes y Antártica Chilena", "porcentaje": 13.6},
+      {"region": "Región del Libertador Bernardo O'Higgins", "porcentaje": 11.4},
+      {"region": "Región de Valparaíso", "porcentaje": 11.1},
+      {"region": "Región de Coquimbo", "porcentaje": 10.8},
+      {"region": "Región del Maule", "porcentaje": 8.9},
+      {"region": "Región de Los Lagos", "porcentaje": 7.3},
+      {"region": "Región de Aysén del Gral.Ibañez del Campo", "porcentaje": 5.7},
+      {"region": "Región del Bío-Bío", "porcentaje": 5.6},
+      {"region": "Región de Ñuble", "porcentaje": 5.0},
+      {"region": "Región de Los Ríos", "porcentaje": 3.6},
+      {"region": "Región de La Araucanía", "porcentaje": 3.4}
+    ],
+    "nacional": {"region": "Chile", "porcentaje": 17.4}
+  }
